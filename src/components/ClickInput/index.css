@@ -1,0 +1,32 @@
+.click-input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.7em 1.7em;
+}
+
+.click-input-text {
+  min-width: 2em;
+  justify-self: stretch;
+}
+
+.click-input-button {
+  height: 2.3em;
+  width: 2.6em;
+  font-size: .6em;
+  padding: 0;
+  border: 1px dashed grey;
+  background: none;
+  box-shadow: none;
+  border-radius: 2px;
+  cursor: pointer;
+  place-self: center;
+}
+
+.click-input-label {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+}
+
+.click-input-label:hover {
+  outline: 1px solid blue;
+}

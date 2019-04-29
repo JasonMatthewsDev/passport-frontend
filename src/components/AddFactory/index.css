@@ -1,0 +1,23 @@
+.add-factory-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 20em;
+  font-size: .8em;
+  grid-gap: 1em;
+}
+
+.add-factory-control {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.add-factory-control > label {
+  font-weight: bold;
+  padding-left: .4em;
+}
+
+.required {
+  color: red;
+}

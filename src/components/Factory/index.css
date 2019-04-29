@@ -1,0 +1,62 @@
+.factory-inputs-p {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  background: rgb(240, 240, 240);
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  padding-right: .3em;
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+
+.factory-name {
+  font-weight: 700;
+}
+
+.factory-name > span {
+  padding-left: .3em;
+  width: calc(100% - .3em);
+}
+
+.factory-lower-bound {
+  width: 100%;
+  background: lightgrey;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.factory-lower-bound > span {
+  padding-left: 1em;
+  padding-right: .2em;
+  width: calc(100% - 1em);
+  border-right: 1px dotted grey;
+  font-size: .8em;
+}
+
+.factory-upper-bound {
+  width: 100%;
+  background: lightgrey;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+.factory-upper-bound > span {
+  padding-right: 1em;
+  padding-left: .2em;
+  width: calc(100% - 1em);
+  text-align: right;
+  border-left: 1px dotted grey;
+  font-size: .8em;
+}
+
+.factory-delete-button {
+  border: none;
+  cursor: pointer;
+  height: 1em;
+}
+
+.factory-delete-button:hover {
+  border: none;
+  color: #444444;
+  background: #F3F3F3;
+}

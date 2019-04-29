@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul, li { 
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+
+li {
+  border: 1px dotted black;
+  border-width: 0 0 1px 1px; 
+}
+
+li.container {
+  border-bottom: 0px;
+}
+
+li div {
+  margin: 0;
+  background: white;
+  position: relative;
+  top: 0.5em; 
+}
+
+li ul { 
+  border-top: 1px dotted black; 
+  margin-left: -1em;     
+  padding-left: 2em; 
+}
+
+ul li:last-child ul {
+  border-left: 1px solid white;
+  margin-left: -17px;
+}
+
+.tree-container {
+  width: 30%;
+  min-width: 15em;
+}
+
+.tree-root {
+  margin-left: 1em;
+}
+
+input[type=text], input[type=number] {
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid #DDDDDD;
+  min-width: 3em;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type=text]:focus:invalid, input[type=number]:focus:invalid {
+  box-shadow: 0 0 5px rgba(238, 81, 81, 1);
+  border: 1px solid rgba(238, 81, 81, 1);
+}
+
+
+input:invalid {
+  border-color: red;
+}
+
+button {
+  color: #444444;
+  background: #F3F3F3;
+  border: 1px #DADADA solid;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 9pt;
+  outline: none;
+}
+
+button:hover {
+  border: 1px #C6C6C6 solid;
+  box-shadow: 1px 1px 1px #EAEAEA;
+  color: #333333;
+  background: #F7F7F7;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 1px #DFDFDF;   
+}
+
+.add-factory-form {
+  padding-top: 1.5em;
+}
