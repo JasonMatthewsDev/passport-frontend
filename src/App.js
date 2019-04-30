@@ -4,8 +4,8 @@ import './App.css';
 
 import { AddFactory, Factory } from './components';
 
-const { REACT_APP_SOCKET_URL } = process.env;
-let webSocket = new WebSocket(REACT_APP_SOCKET_URL);
+const WS_HOST = window.location.origin.replace(/^http/, 'ws');
+let webSocket = new WebSocket(WS_HOST);
 
 const App = () => {
   const [factories, setFactories] = useState([]);
@@ -13,9 +13,10 @@ const App = () => {
 
   //For the purposes of this demo the entire tree is rebuilt and sent on each change.
   webSocket.onmessage = ({ data }) => setFactories(JSON.parse(data).Factories);
-  //If server disconnects, try to reconnect every 5 seconds
+  //If server disconnects, try to reconnect after 5 seconds. This is mostly for development
+  //A more robust solution that retries more than once is probably a good idea for a real production app.
   webSocket.onclose = () => setTimeout(() => {
-    webSocket = new WebSocket(REACT_APP_SOCKET_URL);
+    webSocket = new WebSocket(WS_HOST);
     webSocket.onmessage = ({ data }) => setFactories(JSON.parse(data).Factories);
   }, 5000);
 

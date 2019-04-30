@@ -31,6 +31,8 @@ const Input = ({ cancel, onChange, pattern, title, value, type = 'text' }) => {
   )
 }
 
+//A simple JIRA inspired click to edit re-usable field. Starts a span until clicked where it's replaced with an input.
+//Options for this implementation are currently just text input type and number.
 const ClickInput = ({ value, onChange, pattern, title, type }) => {
   const [edit, setEdit] = useState(false);
 

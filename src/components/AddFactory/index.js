@@ -11,6 +11,7 @@ const AddFactory = ({ onSubmit }) => {
 
   useEffect(() => nameInputRef.current.focus(), []);
 
+  //Send request to create a new factory
   const submitHandler = async e => {
     e.preventDefault();
 

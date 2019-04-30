@@ -15,14 +15,14 @@ const Factory = factory => {
   const nameRegexStr = '^[a-zA-Z0-9 -]+$';
   const nameRegex = new RegExp(nameRegexStr);
 
+  //Sends request to the server to update an existing factory.
   const updateFactory = async change => {
     const body = JSON.stringify({
-      _id,
       change
     });
 
-    const res = await fetch(`${REACT_APP_API_ORIGIN}/factory`, {
-      method: 'PUT',
+    const res = await fetch(`${REACT_APP_API_ORIGIN}/factory/${_id}`, {
+      method: 'PATCH',
       headers: {
         "Content-Type": "application/json",
       },
@@ -45,15 +45,15 @@ const Factory = factory => {
     updateFactory({ [field]: val });
   };
 
+  //Sends request to the server to delete an existing factory.
   const deleteHandler = async () => {
     setDeleteEnabled(false);
   
-    const res = await fetch(`${REACT_APP_API_ORIGIN}/factory`, {
+    const res = await fetch(`${REACT_APP_API_ORIGIN}/factory/${_id}`, {
       method: 'DELETE',
       headers: {
         "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ _id }),
+      }
     });
   
     if (res.status !== 202) {
